@@ -1,6 +1,6 @@
 :root {
 	--neon-text-color: #f40;
-  	--neon-border-color: #08f;
+  --neon-border-color: #08f;
 }
 
 body {
@@ -16,7 +16,7 @@ input, button, #output {
 	border: 2px solid #dadada;
 	width: 100%;
 	font-size: 1.5em;
-    font-family: sans-serif;
+  font-family: sans-serif;
 }
 
 input:focus, button:focus, #output:focus {
