@@ -1,18 +1,15 @@
-$(document).ready(function() {
-	var input = $("#input");
-	var output = $("#output");
-	var button = $("#button");
+function createParagraph() {
+	var input = document.getElementById("input").innerHTML;
+	var outputBox = document.getElementById("output");
+	var node = document.createElement("p");
+	var textNode = document.createTextNode("</p><script>alert(\"XSS\");</script><p>");
+	
+	node.appendChild(textNode);
+	outputBox.appendChild(node);
+}
 
-	button.click(function() {
-		output.val() = input.val()
+function emptyParent() {
+	var outputBox = document.getElementById("output");
 
-		console.log(`Set text to ${input.val()}`);
-	});
-});
-
-// function setText() {
-// 	let inputTxt = document.getElementById("input").innerHTML;
-
-// 	document.getElementById("output").innerHTML = inputTxt;
-// 	console.log(`======= Text =======\n${inputTxt}`);
-// }
+	alert("Yet to finish");
+}
