@@ -11,7 +11,7 @@ input {
 	margin-bottom: 5px;
 }
 
-input, button, textarea {
+input, button, #output {
 	border-radius: 5px;
 	border: 2px solid #dadada;
 	width: 100%;
@@ -19,18 +19,18 @@ input, button, textarea {
     font-family: sans-serif;
 }
 
-input:focus, button:focus, textarea:focus {
+input:focus, button:focus, #output:focus {
 	outline: none;
 	border-color: #f0f000;
 	box-shadow: 0 0 15px #f0f000;
 }
 
-textarea {
-    resize: none;
-    padding-top: .5em;
-    padding-left: .5em;
-    height: 10em;
+#output {
+    padding-top: 1em;
+    padding-left: 1.5em;
+    height: fit-content;
     color: var(--neon-text-color);
+    background-color: transparent;
     animation: flicker 2s infinite alternate;
 }
 
