@@ -5,9 +5,6 @@
 		<link rel="stylesheet" href="./stylesheet.css">
 		<!-- Styling links -->
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
-		<!-- JQuery link -->
-
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Metadata -->
@@ -18,15 +15,24 @@
 	<body>
 		<div class="container d-grid gap-5 position-absolute top-50 start-50 translate-middle">
 			<div class="row">
-				<div class="col">
+				<div class="col-12">
 					<input id="input" type="text" placeholder="Write something" autofocus>
-					<button>Begin!</button>
+				</div>
+
+				<div class="col-6">
+					<button onclick="createParagraph();">Begin!</button>
+				</div>
+				
+				<div class="col-6">
+					<button onclick="emptyParent();">Clear</button>
 				</div>
 			</div>
 			
 			<div class="row">
 				<div class="col">
-					<textarea id="output" name="output" placeholder="Text will appear here" readonly></textarea>
+					<div id="output" name="output">
+						<!-- Output appears here -->
+					</div>
 				</div>
 			</div>
 		</div>
