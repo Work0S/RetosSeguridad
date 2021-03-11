@@ -1,63 +1,61 @@
 :root {
-	--neon-text-color: #f40;
+  --neon-text-color: #f40;
   --neon-border-color: #08f;
 }
 
 body {
-	background-color: #121212;
+  background-color: #121212;
 }
 
 input {
-	margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
-input, button, #output {
-	border-radius: 5px;
-	border: 2px solid #dadada;
-	width: 100%;
-	font-size: 1.5em;
+input, button, #neon {
+  border-radius: 5px;
+  border: 2px solid #dadada;
+  width: 100%;
+  font-size: 1.5em;
   font-family: sans-serif;
 }
 
-input:focus, button:focus, #output:focus {
-	outline: none;
-	border-color: #f0f000;
-	box-shadow: 0 0 15px #f0f000;
+input:focus, button:focus, #neon:focus {
+  outline: none;
+  border-color: #f0f000;
+  box-shadow: 0 0 15px #f0f000;
 }
 
-#output {
-    padding-top: 1em;
-    padding-left: 1.5em;
-    height: fit-content;
-    color: var(--neon-text-color);
-    background-color: transparent;
-    animation: flicker 2s infinite alternate;
+#neon {
+  height: fit-content;
+  color: var(--neon-text-color);
+  background-color: transparent;
+  animation: flicker 2s infinite alternate;
 }
 
 @keyframes flicker {
-
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
-      
-        text-shadow:
-            -0.2rem -0.2rem 1rem #fff,
-            0.2rem 0.2rem 1rem #fff,
-            0 0 2rem var(--neon-text-color),
-            0 0 4rem var(--neon-text-color),
-            0 0 6rem var(--neon-text-color),
-            0 0 8rem var(--neon-text-color),
-            0 0 10rem var(--neon-text-color);
-        
-        box-shadow:
-            0 0 .5rem #fff,
-            inset 0 0 .5rem #fff,
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color),
-            0 0 4rem var(--neon-border-color),
-            inset 0 0 4rem var(--neon-border-color);        
-    }
+  
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
     
-    20%, 24%, 55% {        
-        text-shadow: none;
-        box-shadow: none;
-    }    
+    text-shadow:
+    -0.2rem -0.2rem 1rem #fff,
+    0.2rem 0.2rem 1rem #fff,
+    0 0 1rem var(--neon-text-color),
+    0 0 .1rem var(--neon-text-color),
+    0 0 1rem var(--neon-text-color),
+    0 0 .1rem var(--neon-text-color),
+    0 0 1rem var(--neon-text-color);
+    
+    box-shadow:
+    0 0 .5rem #fff,
+    inset 0 0 .5rem #fff,
+    0 0 1.5rem var(--neon-border-color),
+    inset 0 0 1.5rem var(--neon-border-color),
+    0 0 3rem var(--neon-border-color),
+    inset 0 0 3rem var(--neon-border-color);
+  }
+  
+  20%, 24%, 55% {
+    text-shadow: none;
+    box-shadow: none;
+  }
 }
