@@ -13,31 +13,19 @@
   </head>
   
   <body>
+    <script src="index.js"></script>
     <div class="container d-grid gap-5 position-absolute top-50 start-50 translate-middle">
       <div class="row">
-        <div class="col-12">
-          <input id="input" type="text" placeholder="Write something" autofocus>
-        </div>
-        
-        <div class="col-6">
-          <button onclick="createParagraph();">Begin!</button>
-        </div>
-        
-        <div class="col-6">
-          <button onclick="emptyParent();">Clear</button>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col">
-          <div id="output" name="output">
-            <!-- Output appears here -->
+        <form action="index.php" method="POST">
+          <div class="col-12">
+            <input id="input" name="input-txt" type="text" placeholder="Write your name" autofocus>
           </div>
-        </div>
+          
+          <div class="col-12">
+            <input id="neon" type="submit" value="Begin!">
+          </div>
+        </form>
       </div>
     </div>
-    
-    <script src="./index.js"></script>
-    <!-- Javascript link -->
   </body>
 </html>
